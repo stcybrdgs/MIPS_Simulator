@@ -1,0 +1,201 @@
+/* Copyright 2015, Stacy Bridges
+* styles.css
+*/
+body{
+  margin-left:20%;
+  font-family: Verdana, Arial, sans-serif;
+  font-size:1.2em;
+  color:brown;
+}
+header{
+  font-size:2em;
+  font-weight:bold;
+}
+#multiplicandReg, #productReg, #multiplierReg,
+#trueFalse, #addBitString, #sumBitString,
+#viewerDiv{
+  font-family:"Courier New";  
+}
+.regTable{
+  background-color:white;
+}
+.buttons{
+  background-color:rgb(232,200,160);
+  font-family:"Courier New", sans-serif;
+  font-weight:bold;
+  color:brown;
+}
+.buttons:hover{
+  background-color:rgb(255,255,204);
+  cursor:pointer;
+  color:rgb(200,60,60);
+}
+#simSettings{
+  width:248px;
+  height:680px;
+  float:left;
+}
+#controlBox{
+  float:left;
+  border:1px solid brown;
+  border-radius:25px;
+  background-color:rgb(200,255,255); 
+  width:250px;
+  height:92px;
+  margin-left:20px;
+  padding:0px 0px 0px 6px;
+  font-family:"Calibri", "Arial", sans-serif;
+}
+#mainTable{
+  font-size:1em;
+}
+#mainTable td{
+  //border:1px solid gray;  // toggle table border
+}
+#navMenu{
+  position:relative;
+  margin-top:-1px;
+  margin-left:0px;
+}
+#navMenu li{
+  margin-top:2px;
+  float:left;
+  padding:4px 16px 4px 16px;
+  border:1px solid transparent;
+  border-radius:50px;
+  font-weight:bold;
+  list-style-type:none;
+}
+#navMenu li:hover{
+  background-color:rgb(255,255,230);
+  cursor:pointer;
+  border-color:orange;
+  color:rgb(200,60,60);
+}
+
+.register{
+  background-color:rgb(200,255,255);
+  text-align:center;
+  border:1px solid brown;
+}
+.label{
+  background-color:white;
+  font-style:italic;
+  //font-size:.95em
+}
+.radio{
+  border:1px solid transparent;
+}
+.radio:hover{
+  background-color:rgb(255,255,230);
+  color:rgb(200,60,60);
+  border-color:orange;
+}
+#messageBox{
+  padding:0px 0px 0px 6px;
+  background-color:rgb(255,255,230);
+  border:1px solid brown;
+  font-family:"Calibri", "Arial", sans-serif;
+}
+#validationMessage{
+  font-family:"Calibri", "Arial", sans-serif;
+  color:brown;
+  border:1px solid brown;
+  font-size:1.0em;
+  font-weight:500;
+  height:70px;
+  padding:4px;
+}
+.textField{
+  background-color:rgb(255,255,230);
+  border:1px solid brown;
+  font-size:.90em;
+  height:24px;
+}
+.textField:hover{
+  background-color:white;
+  border-color:orange;
+}
+.helpBox{
+  font-size:.9em;
+  border:1px solid orange;
+  background-color:rgb(255,255,230);
+  padding:4px;
+  font-family:"Calibri", "Arial", sans-serif;
+}
+.help{
+  border:1px solid brown;
+  border-radius:50px;
+  background-color:rgb(235,200,160);
+}
+.help:hover{
+  background-color:rgb(255,255,230);
+  cursor:pointer;
+  color:rgb(200,60,60);
+  border-color:orange;
+}
+.x{
+  font-weight:bold;
+}
+.x:hover{
+  color:orange;
+  cursor:pointer;
+}
+.graphics{
+  visibility:hidden;
+}
+.binAdd{
+  visibility:hidden;
+}
+.aluInputs{
+  visibility:hidden;
+}
+#pauseButton{
+  visibility:hidden;
+  height:38px;
+}
+#resumeButton{
+  visibility:hidden;
+  height:38px;
+}
+#movezone{
+  height:60px;
+  background-color:rgb(255,255,230);
+  border:1px solid brown;
+  font-size:1.5em;font-weight:bold;
+}
+#movezone:hover{
+  cursor:move;
+  background-color:rgb(232,200,160);
+}
+.deliverables{
+  text-decoration:none;
+  color:brown;
+  padding:4px 16px 4px 16px;
+  border:1px solid transparent;
+  border-radius:50px;
+  font-weight:bold;
+  list-style-type:none;
+  font-size:.45em;
+}
+.deliverables:hover{
+  background-color:rgb(255,255,230);
+  cursor:pointer;
+  border-color:orange;
+  color:rgb(200,60,60);
+}
+#userGuide{
+  position:relative;
+  left:506px;
+  top:10px;
+}
+#htmlCode{
+  position:relative;
+  left:598px;
+  top:10px;
+}
+#cssCode{
+  position:relative;
+  left:346px;
+  top:10px;
+}
