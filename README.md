@@ -4,5 +4,5 @@ This web project is meant to assist MIPS newcomers in conceptualizing the operat
 
 This web project began as a **[C++ assignment](https://github.com/stcybrdgs/misclCpp/tree/master/mipsOps)** for a computer architecture class at Texas State University in San Marcos.
 
-This web project uses HTML, CSS, and JavaScript.
+This web project uses JavaScript, CSS, and HTML.
 
