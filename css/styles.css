@@ -119,6 +119,7 @@ header{
 .helpBox{
   font-size:.9em;
   border:1px solid orange;
+  border-radius:5px;
   background-color:rgb(255,255,230);
   padding:4px;
   font-family:"Calibri", "Arial", sans-serif;
@@ -176,7 +177,7 @@ header{
   border-radius:50px;
   font-weight:bold;
   list-style-type:none;
-  font-size:.45em;
+  font-size:.48em;
 }
 .deliverables:hover{
   background-color:rgb(255,255,230);
@@ -186,16 +187,6 @@ header{
 }
 #userGuide{
   position:relative;
-  left:506px;
-  top:10px;
-}
-#htmlCode{
-  position:relative;
-  left:598px;
-  top:10px;
-}
-#cssCode{
-  position:relative;
-  left:346px;
+  left:720px;
   top:10px;
 }

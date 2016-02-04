@@ -6,8 +6,23 @@
 <head>
     <!-- domain: mipsops -->
     <title>MIPS Operations</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+    <!-- meta data -->
+    <meta name="keywords" content="html, css, javascript, mips, simulator, interface, multiplication, division, algorithm">
+    <meta name="description" content="A MIPS simulator meant to demonstrate how the MIPS architecture handles multiplication and division operations.">
+    <meta property="og:title" content="MIPS Operations" />
+    <meta property="og:description" content="A MIPS simulator meant to demonstrate how the MIPS architecture handles multiplication and division operations." />
 
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"> 
+
+    <!-- FAVICON -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Javascript Functions -->
     <script language="JavaScript1.2" type="text/javascript"> 
 
     /************************************************************************ 
@@ -417,13 +432,22 @@
                 abacus = 0;
                 logCount = 0;
                 logFlag = 0;
-            }// end for						
+            }// end for	
+
+            startFlag = -1; // allow setInterval()
+
         }// end if	
-		
-        document.getElementById("simStateMessage").innerHTML="the sim is running. . . ";
-			 
-        // run the SIM on a timed interval basis	
-        myVar = setInterval( runSim, speed );    
+
+        // run the SIM on a timed interval basis
+        if( startFlag == -1 ){	
+            myVar = setInterval( runSim, speed );   
+            document.getElementById("simStateMessage").innerHTML="the sim is running. . . ";
+
+            // disallow setInterval()--> ie, set startFlag s.t. clicking 'run' more than once 
+            // in a row has no effect on the simulation            
+            startFlag = -2; 
+        }
+
     }// end startSim()
 
 
@@ -442,15 +466,17 @@
 
 
     function stopSim(x){
-        if( count > 0 ){ // if count == 0, the sim has not been started yet, so 
-                         // no need to run stop instructions
+        if( count > 0 || count == -1 ){ 
             clearInterval(myVar);
             startFlag = x;
+
             if( startFlag == 1){
-                document.getElementById("simStateMessage").innerHTML="the sim is stopped. . . ";	
+                document.getElementById("simStateMessage").innerHTML="the sim is stopped. . . ";
+                startFlag = -1;	
             }
             if( startFlag == 0 ){
                 document.getElementById("simStateMessage").innerHTML="the sim run is finished. ";
+                count = 0;
             }	
         }
     }//end stopSim()
@@ -781,7 +807,7 @@
         if( count == 23 && abacus == 32){
             // end operation loop							 	
             document.getElementById("messageBox").innerHTML="operation complete!"
-            count = 0;
+            count = -1;
             abacus = 0;
             stopSim(0);
         }
@@ -1033,18 +1059,11 @@
 
 <body onload="init();">
     <header>
-        MIPS Ops
-        <a href="docs/htmlCode.pdf" target="_blank" id="htmlCode" class="deliverables" title="deliverable">
-            <img src="images/pdfIconSmall.png" style="position:relative;top:6px;">   
-            html/js
-        </a>
-
-        <a href="docs/cssCode.pdf" target="_blank" id="cssCode" class="deliverables" title="deliverable">
-            <img src="images/pdfIconSmall.png" style="position:relative;top:6px;">   
-            css
-        </a>						
-        <a href="docs/mipsOpsUserGuide.pdf" target="_blank" class="deliverables" id="userGuide" title="deliverable">
-            <img src="images/pdfIconSmall.png" style="position:relative;top:6px;">               
+        MIPS 
+        <i class="fa fa-cog"></i>
+        Ops
+        <a href="docs/mipsOps_userGuide_v1.0.pdf" target="_blank" class="deliverables" id="userGuide" title="deliverable">
+            <i class="fa fa-book"></i>
             user guide
         </a>
         <div style="width:1138px;height:4px;border-bottom:1px solid brown;margin-top:20px;margin-bottom:20px;"></div>
@@ -1384,7 +1403,7 @@
                 <td style="width: 0px;">17</td>															
             </tr>
             <tr>
-                <td colspan="18" style="border-top:1px solid brown;text-align:center;font-size:.75em;"><br><br>&copy;&nbsp;2015,&nbsp;&nbsp;Stacy Bridges</td>
+                <td colspan="18" style="border-top:1px solid brown;text-align:center;font-size:.75em;"><br><br>&copy;&nbsp;2016,&nbsp;&nbsp;Stacy Bridges</td>
             </tr>										
         </table><!-- end mainTable -->															
     </div><!-- end mainDiv -->
