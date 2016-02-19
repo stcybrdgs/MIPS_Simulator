@@ -2,10 +2,15 @@
 * styles.css
 */
 body{
-  margin-left:20%;
   font-family: Verdana, Arial, sans-serif;
   font-size:1.2em;
   color:brown;
+}
+#main-wrapper{
+  margin: 0 auto;
+  width: 1150px;
+}
+#content-wrapper{
 }
 header{
   font-size:2em;
@@ -46,11 +51,12 @@ header{
   padding:0px 0px 0px 6px;
   font-family:"Calibri", "Arial", sans-serif;
 }
+#main-div{
+}
 #mainTable{
   font-size:1em;
 }
 #mainTable td{
-  //border:1px solid gray;  // toggle table border
 }
 #navMenu{
   position:relative;
